@@ -28,5 +28,7 @@ git commit -am "message"
 5. Push changes
 
 ```
-git push origin branch-name
+git push
 ```
+
+6. Press Compare & Pull request in github
