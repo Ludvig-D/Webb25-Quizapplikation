@@ -43,6 +43,66 @@ const categories = {
     },
   ],
 };
+ const quizData = [
+      {
+        question: "Vad är HTML?",
+        choices: [
+          "Hypertext markup language",
+          "Hypertext and markup language",
+          "Hyperaktive media lead"
+        ],
+        correctIndex: 0,
+        explanation: "HTML står för HyperText Markup Language – det används för att strukturera innehåll på webben."
+      },
+      {
+        question: "Vad är CSS?",
+        choices: [
+          "Cascading style sheets",
+          "Casablanca santa santa",
+          "Casino spain spain"
+        ],
+        correctIndex: 0,
+        explanation: "CSS står för Cascading Style Sheets – det används för att styla och formatera webbsidor."
+      },
+      {
+        question: "Vad är JavaScript?",
+        choices: [
+          "Programmerings språk",
+          "Datorer",
+          "UV index design"
+        ],
+        correctIndex: 0,
+        explanation: "JavaScript är ett programmeringsspråk som gör webbsidor interaktiva."
+      }
+    ];
+    const quizQuestions = [
+      {
+        question: "Vad är HTTP?",
+        answers: {
+          a: "Hypertext Transfer Protocol",
+          b: "Hypermarkup text tissue post",
+          c: "Hyperexpert ten toes pound"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "Vad är en Array?",
+        answers: {
+          a: "En samling av element",
+          b: "Ett moln",
+          c: "Molntjänster i datorn"
+        },
+        correctAnswer: "a"
+      }
+    ];
+    let current = 0;
+    let score = 0;
+
+    const quizDiv = document.getElementById('quiz');
+    const submitBtn = document.getElementById('submitBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const resultDiv = document.getElementById('result');
 
 // hämta frågorna för vald kategori på onclick
 startBtn.addEventListener("click", () => {
