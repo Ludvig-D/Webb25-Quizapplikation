@@ -68,25 +68,24 @@ function loadQuestion() {
     showResults();
     return;
   }
+  answersContainer.innerHTML = "";
 
-  const currentQuestion = currentQuestions[currentQuestionIndex];
+  const currentQuestion = currentQuestions[currentQuestionIndex]; // för lite mer lätläst så skapar jag till denna variabel
 
   questionText.textContent = currentQuestion.question;
 
-  if (questionCounter) {
-    questionCounter.textContent = `Fråga ${currentQuestionIndex + 1} av ${
-      currentQuestions.length
-    }`;
-  }
-
-  answersContainer.innerHTML = "";
+  questionCounter.textContent = `Fråga ${currentQuestionIndex + 1} av ${
+    currentQuestions.length
+  }`;
 
   // Skapa svarsalternativ knapparna
   currentQuestion.answers.forEach((answer, index) => {
     const button = document.createElement("button");
     button.className = "answer-btn";
     button.textContent = answer;
-    button.addEventListener("click", () => handleAnswer(index));
+    button.addEventListener("click", function () {
+      handleAnswer(index);
+    });
     answersContainer.appendChild(button);
   });
 }
@@ -110,12 +109,13 @@ function handleAnswer(selectedIndex) {
   loadQuestion();
 }
 
+//ersätt knapparna med en innerHTML , visa resultatet och en conditional för om du inte får några rätt
 function showResults() {
   questionText.textContent = "Quiz slutfört!";
   answersContainer.innerHTML = `
     <div class="results">
      <p>Du fick: ${score} av ${currentQuestions.length} rätt</p>
-      <h1>${score > 0 ? "Bra jobbat!" : "bättre lycka nästa gång!"}</h1>
+      <h1>${score > 0 ? "Bra jobbat!" : "bättre lycka nästa gång!"}</h1> 
       <button class="answer-btn" onclick="restartQuiz()">Spela igen</button>
     </div>
   `;
