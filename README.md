@@ -3,7 +3,7 @@
 1. Clone the repository:
 
 ```
- git clone https://github.com/yourusername/yourproject.git
+ git clone https://github.com/Ludvig-D/Webb25-Quizapplikation.git
 ```
 
 2. Pull the repo:
