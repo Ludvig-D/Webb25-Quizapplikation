@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 
 * {
   margin: 0;
@@ -6,103 +6,116 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   display: flex;
   justify-content: center;
-
   align-items: center;
   height: 100vh;
+  width: 100vw;
   background-color: lightgray;
 }
 
 .start-page {
-  width: 400px;
-  height: 400px;
   border: 2px solid rgb(123, 123, 128);
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
+  height: 100%;
+  padding: 2rem 0;
+}
+
+.start-page label {
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
-  font-family: "Honk";
-  font-size: 40px;
-  margin-left: 15px;
-  margin-right: 15px;
+  font-family: 'Honk';
+  font-size: 4rem;
+  margin: 0 1rem;
 }
 
 p {
   text-align: center;
-  font-family: "Honk";
-  font-size: 24px;
+  font-family: 'Honk';
+  font-size: 2rem;
+  padding: 0 1rem;
 }
 
 .quiz {
   display: flex;
   gap: 3px;
   label {
-    font-family: "Honk";
+    font-family: 'Honk';
   }
   select {
     background-color: lightgray;
+    border-radius: 5px;
+    border: 2px solid darkgray;
   }
 }
+
 button {
   all: unset;
   background-color: rgb(255, 140, 0);
-  margin: 0 5px;
+  margin: 0 0.4rem;
   width: 40%;
-  padding: 5px 10px;
+  padding: 0.4rem 0.7rem;
   text-align: center;
+  border-radius: 5px;
 }
+
 button:hover {
   background-color: rgb(221, 111, 8);
 }
 
 select:hover {
   background-color: rgb(221, 111, 8);
+  color: #fff;
+  border: 2px solid #c16108;
 }
 
 /* QUESTIONS PAGE */
 
 .questions-page {
-  width: 400px;
-  height: 400px;
   border: 2px solid rgb(13, 123, 128);
   display: none;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
   border-radius: 5px;
+  padding: 2rem 0;
 }
 
 #question-counter {
-  font-family: "Honk";
+  font-family: 'Honk';
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 1.8rem;
   font-size: 24px;
-  width: 100%;
 }
 
 #answers-container {
   display: flex;
-  margin-top: 30px;
+  margin-top: 1.8rem;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  width: 100%;
+  gap: 0.7rem;
 }
 
 .results h1 {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .results p {
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
 }
 
 .results {
@@ -110,5 +123,17 @@ select:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
+}
+
+@media (width <= 500px) {
+  .container {
+    width: 100%;
+    height: 80%;
+  }
+  html,
+  body {
+    align-items: start;
+    padding-top: 1rem;
+    height: 90vh;
+  }
 }

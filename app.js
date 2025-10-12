@@ -92,8 +92,8 @@ function loadCategories() {
     categorySelect.appendChild(catOption);
   }
 }
-
 loadCategories();
+
 // hämta frågorna för vald kategori på onclick
 startBtn.addEventListener('click', () => {
   const selectedCategory = categorySelect.value;
@@ -162,10 +162,12 @@ function handleAnswer(selectedIndex) {
 //ersätt knapparna med en innerHTML , visa resultatet och en conditional för om du inte får några rätt
 function showResults() {
   questionText.textContent = 'Quiz slutfört!';
+  console.log(answersContainer);
+
   answersContainer.innerHTML = `
     <div class="results">
      <p>Du fick: ${score} av ${currentQuestions.length} rätt</p>
-      <h1>${score > 0 ? 'Bra jobbat!' : 'bättre lycka nästa gång!'}</h1> 
+      <h1>${score > 0 ? 'Bra jobbat!' : 'Bättre lycka nästa gång!'}</h1> 
       <button class="answer-btn" onclick="restartQuiz()">Spela igen</button>
     </div>
   `;
