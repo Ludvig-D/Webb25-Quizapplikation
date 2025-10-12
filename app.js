@@ -29,6 +29,16 @@ const categories = {
       answers: ['Stockholm', 'Oslo', 'Köpenhamn', 'Uppsala'],
       correctAnswer: 2,
     },
+    {
+      question: 'Vad heter huvudstaden i Finland?',
+      answers: ['Stockholm', 'Helsingfors', 'Köpenhamn', 'Uppsala'],
+      correctAnswer: 1,
+    },
+    {
+      question: 'Vad heter huvudstaden i Tyskland?',
+      answers: ['Stockholm', 'Oslo', 'Berlin', 'Uppsala'],
+      correctAnswer: 2,
+    },
   ],
   Sport: [
     {
@@ -46,20 +56,20 @@ const categories = {
     {
       question: 'Vad är HTML?',
       answers: [
-        'Hypertext markup language',
         'Hypertext and markup language',
+        'Hypertext markup language',
         'Hyperaktive media lead',
       ],
-      correctAnswer: 0,
+      correctAnswer: 1,
     },
     {
       question: 'Vad är CSS?',
       answers: [
-        'Cascading style sheets',
         'Casablanca santa santa',
         'Casino spain spain',
+        'Cascading style sheets',
       ],
-      correctAnswer: 0,
+      correctAnswer: 2,
     },
     {
       question: 'Vad är JavaScript?',
@@ -69,11 +79,11 @@ const categories = {
     {
       question: 'Vad är HTTP?',
       answers: [
-        'Hypertext Transfer Protocol',
         'Hypermarkup text tissue post',
+        'Hypertext Transfer Protocol',
         'Hyperexpert ten toes pound',
       ],
-      correctAnswer: 0,
+      correctAnswer: 1,
     },
     {
       question: 'Vad är en Array?',
