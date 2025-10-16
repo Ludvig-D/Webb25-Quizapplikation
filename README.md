@@ -1,6 +1,8 @@
-## How to collaberate
+## Quizapplikation
 
 Grupp inlämningen i frontend 1 (Nackademin)
+
+### How to collaberate
 
 1. Clone the repository:
 
