@@ -1,6 +1,6 @@
 ## Quizapplikation
 
-Grupp inlämningen i frontend 1 (Nackademin)
+Grupp inlämningen i frontend 1 (Nackademin Webb25)
 
 ### How to collaberate
 
